@@ -7,7 +7,8 @@ const adapter = new PrismaAdapter(prisma)
 
 export const authOptions ={
     adapter: PrismaAdapter(prisma),
-    //secret: process.env.AUTH_SECRET,
+    secret: process.env.AUTH_SECRET,
+    synchronize: false,
     providers: [
         GoogleProvider({
         clientId: process.env.GOOGLE_CLIENT_ID,
