@@ -9,6 +9,7 @@ export default function CreatePost(){
 
     const [title, setTitle] = useState("");
     const [isDisabled, setDisabled] = useState(false);
+    const queryClient = useQueryClient()
     let toastPostID: string
     //Create a post
 
@@ -24,6 +25,7 @@ export default function CreatePost(){
         },
         onSuccess: (data) => {
             toast.success('Post has been made!', {id: toastPostID})
+            queryClient.invalidateQueries(["posts"])
             setTitle('');
             setDisabled(false);
         },
