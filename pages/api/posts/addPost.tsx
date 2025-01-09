@@ -13,7 +13,6 @@ export default async function handler(
         }
         
         const title: string = req.body.title
-        console.log(title)
         const prismaUser = await prisma.user.findUnique({
             where: {email: session?.user?.email}
         })
