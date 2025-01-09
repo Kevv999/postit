@@ -1,8 +1,6 @@
-// Import the PrismaClient class from the Prisma package
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from "@prisma/client"
 
-// Instantiate the PrismaClient
-const prisma = new PrismaClient();  
+const client = globalThis.prisma || new PrismaClient()
+if (process.env.NODE_ENV !== "production") globalThis.prisma = client
 
-// Export the PrismaClient instance for reuse across your project
-module.exports = prisma;
+export default client
