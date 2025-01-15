@@ -1,5 +1,10 @@
 # Post and Commenting App
 
+![image](https://github.com/user-attachments/assets/9a0c292d-a942-434c-98c7-57b1e7897da3)
+
+https://github.com/user-attachments/assets/34f7058d-39e5-4504-b618-dc1f081e44ee
+
+
 ## Description
 
 This project allows users to create, delete, and comment on posts. Users must log in using their Google account via Google OAuth with Prisma and Supabase as the backend for managing the data. 
